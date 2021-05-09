@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { StyleSheet, View, Image, Text } from 'react-native';
 
 export default function Item({ item }) {

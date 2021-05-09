@@ -8,7 +8,7 @@ export default function Movies() {
     try {
       let promise = await fetch('https://www.csbootstrap.com/movies.json');
       let data = await promise.json();
-      console.log("Data : ", data);
+      // console.log("Data : ", data);
       setMovies(data.movies);
 
     } catch (error) {
