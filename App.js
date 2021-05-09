@@ -1,9 +1,13 @@
 import React from 'react';
-import Bmi from './screens/Bmi';
+// import Item from './components/Item';
+import Movies from './components/Movies';
+// import Bmi from './screens/Bmi';
 
 export default function App() {
   return (
-    <Bmi />
+    // <Bmi />
+    <Movies />
+
   );
 }
 
