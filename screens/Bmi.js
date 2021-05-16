@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
 
-export default function Bmi() {
+export default function Bmi({ navigation }) {
   const [weight, setWeight] = useState('');
   const [height, setHeight] = useState('');
   const [bmi, setBmi] = useState('0');
@@ -49,9 +49,12 @@ export default function Bmi() {
 
       <Text style={styles.Textlabal}>BMI : {bmi}</Text>
 
-      <Button title="Calculate" onPress={compute} />
       <Text style={styles.Textlabal}>{description}</Text>
+      <View>
+        <Button title="Calculate" onPress={compute} />
+      </View>
     </View>
+
   )
 }
 const styles = StyleSheet.create({
@@ -67,5 +70,10 @@ const styles = StyleSheet.create({
   Text: {
     marginBottom: 20
   },
+  // fixToText: {
+  //   flexDirection: 'row',
+  //   justifyContent: 'space-between',
+  //   alignItems: 'center'
+  // },
 });
 

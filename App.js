@@ -1,13 +1,38 @@
 import React from 'react';
-// import Item from './components/Item';
-import Movies from './components/Movies';
-// import Bmi from './screens/Bmi';
+import BottomTab from './navigations/BottomTab';
+import SecondBottomTab from './navigations/SecondBottomTab';
+import ThreeBottomTab from './navigations/ThreeBottomTab';
+
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+
+const RootStack = createStackNavigator();
 
 export default function App() {
   return (
-    // <Bmi />
-    <Movies />
+    <NavigationContainer> 
+      <RootStack.Navigator initialRouteName="BottomTab">
+        <RootStack.Screen
+          name="BottomTab"
+          component={BottomTab}
+          options={{ title: 'Main', headerShown: false }}
+        />
 
+        <RootStack.Screen
+          name="SecondBottomTab"
+          component={SecondBottomTab}
+          options={{ title: 'Second Tab' }}
+        />
+
+        <RootStack.Screen
+          name="ThreeBottomTab"
+          component={ThreeBottomTab}
+          options={{ title: 'Three Tab' }}
+        />
+
+      </RootStack.Navigator>
+
+    </NavigationContainer>
   );
 }
 
