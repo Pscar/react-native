@@ -8,7 +8,7 @@ export default function HomeScreen({ navigation }) {
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
         <Ionicons name="md-home" size={50} color="#848484" />
         <Text>Home Screen</Text>
-        
+
       </View>
       <View style={styles.fixToText}>
         <Button
@@ -19,6 +19,11 @@ export default function HomeScreen({ navigation }) {
         <Button
           onPress={() => navigation.navigate('ThreeBottomTab')}
           title="Three"
+          color=""
+        />
+        <Button
+          onPress={() => navigation.navigate('TodoTab')}
+          title="TodoList"
           color=""
         />
       </View>
